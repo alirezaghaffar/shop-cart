@@ -1,12 +1,15 @@
 import React from 'react';
 
+//components
+import Store from './components/Store';
+
 //context
 import ProductContextProvider from './context/ProductContextProvider';
 
 const App = () => {
   return (
     <ProductContextProvider>
-    
+      <Store />
     </ProductContextProvider>
   );
 };
