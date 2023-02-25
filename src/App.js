@@ -1,17 +1,23 @@
-import React from 'react';
+import React from "react"
+import { Route, Switch, Redirect } from "react-router-dom";
 
-//components
+// Components
 import Store from './components/Store';
+import ProductDetails from './components/ProductDetails';
 
-//context
+// Context
 import ProductContextProvider from './context/ProductContextProvider';
 
-const App = () => {
+function App() {
   return (
     <ProductContextProvider>
-      <Store />
+      <Switch>
+        <Route path="/products/:id" component={ProductDetails} />
+        <Route path="/products" component={Store} />
+        <Redirect to="/products" />
+      </Switch>
     </ProductContextProvider>
   );
-};
+}
 
 export default App;

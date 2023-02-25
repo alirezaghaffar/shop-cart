@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 //functions
-import { shorten } from '../helpers/functions';
+import { shorten } from '../../helpers/functions';
 
 const Product = ({ ProductData }) => {
     return (
         <div>
-            <img src={ProductData.image} alt="product picture" style={{ width: "200px" }} />
+            <img src={ProductData.image} alt="product" style={{ width: "200px" }} />
             <h3>{shorten(ProductData.title)}</h3>
             <p>{ProductData.price}</p>
             <div>
-                <a href='button' >details</a>
+                <Link to={`/products/${ProductData.id}`}>details</Link>
                 <div>
                     <button>Add To Cart</button>
                 </div>

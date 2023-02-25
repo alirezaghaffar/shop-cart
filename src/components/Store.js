@@ -12,7 +12,10 @@ const Store = () => {
 
     return (
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between" }} >{
-            products.map(product => <Product key={product.id} ProductData={product} />)
+            products.map(product => <Product
+                key={product.id}
+                ProductData={product}
+            />)
         }</div>
     );
 };
