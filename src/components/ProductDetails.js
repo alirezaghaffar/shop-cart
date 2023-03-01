@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 // Context
 import { ProductsContext } from '../context/ProductContextProvider';
 
-const ProductDetails = (props) => {
+const ProductDetails = (prop) => {
 
-    const id = props.match.params.id;
+    const id = prop.match.params.id;
     const data = useContext(ProductsContext);
     const product = data[id - 1];
     const {image , title , description , price , category} = product
